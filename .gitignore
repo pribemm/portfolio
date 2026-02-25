@@ -1,0 +1,7 @@
+api-gmail/credential.json
+api-gmail/token.json
+*.tmp
+
+# Ambientes virtuais
+.venv_portfolio
+api-gmail/data
