@@ -17,10 +17,10 @@ SCOPES = ["https://www.googleapis.com/auth/gmail.readonly"]
 
 # Definição dos caminhos (ajuste se necessário)
 
-PATH_BASE = Path.cwd()/'api-gmail'  # diretório base do projeto (ajuste se necessário)
+PATH_BASE = Path.cwd() # diretório base do projeto (ajuste se necessário)
 print(f"Diretório de trabalho: {PATH_BASE}")
-TOKEN = PATH_BASE / "token.json"  # arquivo onde o token de acesso será salvo
-CREDENTIAL = PATH_BASE / "credential.json"
+TOKEN =  "token.json"  # arquivo onde o token de acesso será salvo
+CREDENTIAL = "credential.json"
 
 # diretório onde os anexos serão gravados. fica dentro de `data/attachments`.
 # garantimos que a hierarquia exista no momento da importação/executação.
