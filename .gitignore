@@ -1,0 +1,34 @@
+# Ambientes virtuais
+venv/
+.env/
+.venv_portfolio/
+ENV/
+
+# Arquivos de credenciais (qualquer extensão)
+*.cred
+*.credential
+credential.json
+token.json
+*.pem
+*.key
+*.secret
+
+# Arquivos de configuração local (ex: IDE)
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Cache do Python
+__pycache__/
+*.pyc
+
+# Pastas de dados (se não quiser versionar dados)
+data/
+dataset/
+logs/
+
+# Outros arquivos temporários
+temp/
+tmp/
