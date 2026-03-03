@@ -13,11 +13,11 @@ def divisores_proprios(n):
     '''Retorna os divisores próprios de n, excluindo n'''
 
     divisores = []
-    for i in range(1, int(math.ceil(math.sqrt(n))) + 1):
+    for i in range(1, int(math.ceil(n//2)) + 1):
         if n % i == 0:
             divisores.append(i)
-            if i != n // i and n // i != n:
-                divisores.append(n // i)
+            # if i != n // i and n // i != n:
+            #    divisores.append(n // i)
     return divisores
 
 
@@ -41,7 +41,7 @@ def encontrar_numeros_perfeitos(limite_inferior, limite_superior):
     for i in range(limite_inferior, limite_superior + 1):
         if i == soma_divisores(i):
             numeros_perfeitos.append(i)
-            print(f'{numero_perfeito(i)} = {" + ".join(map(str, divisores_proprios(i)))}')
+            print(f'{numero_perfeito(i)}')
     return numeros_perfeitos
 
 
@@ -49,4 +49,8 @@ if __name__ == "__main__":
     limite_inferior = int(input("Digite o limite inferior: "))
     limite_superior = int(input("Digite o limite superior: "))
     numeros_perfeitos = encontrar_numeros_perfeitos(limite_inferior, limite_superior)
-    print(f'{", ".join(map(str, numeros_perfeitos))} são os números perfeitos entre {limite_inferior} e {limite_superior}.')
+    
+    if numeros_perfeitos:
+        print(f'{", ".join(map(str, numeros_perfeitos))} são os números perfeitos entre {limite_inferior} e {limite_superior}.')
+    else:
+        print(f'Não há números perfeitos entre {limite_inferior} e {limite_superior}.')
